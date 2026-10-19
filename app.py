@@ -3,8 +3,21 @@ import random
 import joblib
 import streamlit as st
 
+# إعدادات الصفحة
 st.set_page_config(page_title="المساعد الذكي للجامعة", page_icon="🎓")
 
+# الكود الجديد لإخفاء عناصر الـ Fork والقائمة والـ Footer
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            .stAppDeployButton {display: none;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# عنوان التطبيق
 st.title("🎓 المساعد الذكي للاستفسارات الجامعية")
 st.caption("نموذج ذكاء اصطناعي قائم على الشبكات العصبية العميقة (MLP)")
 
